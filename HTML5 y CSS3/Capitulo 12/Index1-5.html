@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Html5 - Compatibilidad con navegadores antiguos</title>
+</head>
+<body>
+    <audio controls>
+        <source src="multimedia/piano.ogg">
+        <source src="multimedia/piano.mp3">
+        <object type="audio/mpeg" data="multimedia/piano.mp3" width="280" height="45"
+        classid="clsid:22d6f312-b0f6-11d0-97ab-0080c74c7e95">
+            <param name="src" value="multimedia/piano.mp3">
+            <param name="autoplay" value="false">
+            <param name="loop" value="false">
+            <param name="controller" value="true">
+        </object>
+    </audio>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Html5 - Cursores</title>
+    <style>
+        span {
+            margin-right: 25px;
+        }
+    </style>
+    <script type="text/javascript">
+        function mostrar(seleccion){
+            document.getElementById("valor").innerHTML = seleccion;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        Cantidad solicitada<br>
+        <input name="cursor" type="range" min="1" max="5" value="3"
+        step="1" style="margin-top: 10px; width: 155px;"
+        onchange="mostrar(this.value)"><br>
+        <div style="margin-top: -2px;">
+            <span style="margin-left: 2px;">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+        <p>Ha escogido... <span id="valor">3</span></p>
+    </form>
+</body>
+</html>
