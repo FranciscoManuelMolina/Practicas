@@ -1,0 +1,19 @@
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: line-through;
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+a:active {
+    text-decoration: underline overline;
+}

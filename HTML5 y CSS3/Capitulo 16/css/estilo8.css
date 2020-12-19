@@ -1,0 +1,12 @@
+h2 {
+    white-space: pre;
+}
+
+div {
+    width: 200px;
+    border: 1px solid gray;
+}
+
+.ejemplo {
+    white-space: nowrap;
+}

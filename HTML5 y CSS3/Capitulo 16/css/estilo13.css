@@ -1,0 +1,29 @@
+div {
+    margin: 15px;
+    font-size: 150%;
+    width: 272px;
+    padding-left: 3px;
+    border: 1px solid silver;
+}
+
+.nada {
+    white-space: nowrap;
+}
+
+.clip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.string {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ", etc.";
+}

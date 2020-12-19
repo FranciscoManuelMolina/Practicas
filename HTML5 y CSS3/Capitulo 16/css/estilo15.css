@@ -1,0 +1,14 @@
+div {
+    width: 200px;
+    float: left;
+    margin-right: 15px;
+}
+
+#calibri p {
+    font: 14px Calibri sans-serif;
+}
+
+#verdana p {
+    font: 14px Verdana, sans-serif;
+    font-size-adjust: 0.465;
+}

@@ -1,0 +1,15 @@
+.deco1 {
+    text-decoration: overline;
+}
+
+.deco2 {
+    text-decoration: underline;
+}
+
+.deco3 {
+    text-decoration: underline overline;
+}
+
+.deco4 {
+    text-decoration: line-through;
+}

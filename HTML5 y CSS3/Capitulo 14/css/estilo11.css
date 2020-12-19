@@ -1,0 +1,15 @@
+#division > h1 {
+    width: 200px;
+    background-color: #9cf;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

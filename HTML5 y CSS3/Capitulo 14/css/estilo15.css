@@ -1,0 +1,7 @@
+h1::before {
+    content: url(../img/globo.jpeg);
+}
+
+h1::after {
+    content: url(../img/new.gif);
+}

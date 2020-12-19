@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "mifuente";
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+.fontface {
+    font: 100px mifuente, fantasy;
+}

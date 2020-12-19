@@ -1,0 +1,35 @@
+.style1 {
+    list-style: disc;
+}
+
+.style2 {
+    list-style: circle;
+}
+
+.style3 {
+    list-style: square;
+}
+
+.style4 {
+    list-style: decimal;
+}
+
+.style5 {
+    list-style: decimal-leading-zero;
+}
+
+.style6 {
+    list-style: upper-roman;
+}
+
+.style7 {
+    list-style: lower-roman;
+}
+
+.style8 {
+    list-style: upper-alpha;
+}
+
+.style9 {
+    list-style: lower-alpha;
+}
