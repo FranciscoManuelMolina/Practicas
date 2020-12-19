@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Declaración de los objetos JavaScript de manera "Inline"</title>
+</head>
+<body>
+    <script>
+
+        var Adicion = {
+            x: 5,
+            y: 10,
+            calculo: function()
+            {
+                return this.x + this.y;
+            }
+        };
+
+        document.write("Suma: " + Adicion.calculo());
+    </script>
+</body>
+</html>

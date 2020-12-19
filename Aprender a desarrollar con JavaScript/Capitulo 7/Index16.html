@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Llamada de un procedimiento con argumentos</title>
+</head>
+<body>
+    <script>
+
+        function doblado(x, y)
+        {
+            x = x * 2;
+            y = y * 2;
+            document.write("La dupla doblada es (" + x + ", " + y + ")<br>");
+        }
+
+
+        alert("Ejercicio Procedure");
+
+        var a, b, c, d;
+
+        a = parseInt(prompt("Argumento a: "));
+        b = parseInt(prompt("Argumento b: "));
+
+        doblado(a, b);
+
+        c = parseInt(prompt("Argumento c: "));
+        d = parseInt(prompt("Argumento d: "));
+
+        doblado(c, d);
+            
+        
+    </script>
+</body>
+</html>

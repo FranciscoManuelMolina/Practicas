@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Paso de argumento a un constructor</title>
+</head>
+<body>
+    <script>
+        var Coche = function(modelo)
+        {
+            this.modelo = modelo;
+        }
+
+        var miCoche = new Coche("simca1100");
+
+        document.write("Tengo un " + miCoche.modelo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Contar el número de vocales en una palabra</title>
+</head>
+<body>
+    <script>
+        
+        var palabra, nb_vocales, contador;
+
+        palabra = prompt("Palabra: ");
+
+        palabra = palabra.toUpperCase();
+
+        nb_vocales = 0;
+
+        for (contador=0; contador<=palabra.length; contador++)
+        {
+            switch (palabra.charAt(contador))
+            {
+                case "A":
+                    nb_vocales = nb_vocales + 1;
+                    break;
+                case "E":
+                    nb_vocales = nb_vocales + 1;
+                    break;
+                case "I":
+                    nb_vocales = nb_vocales + 1;
+                    break;
+                case "O":
+                    nb_vocales = nb_vocales + 1;
+                    break;
+                case "U":
+                    nb_vocales = nb_vocales +1;
+                    break;
+            }
+        }
+
+        document.write(palabra + " contiene " + nb_vocales + " vocales");
+        
+        
+    </script>
+</body>
+</html>

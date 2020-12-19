@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Superficie y volumen de una esfera</title>
+</head>
+<body>
+    <h1>JavaScript - Superficie y volumen de una esfera</h1>
+    
+    <script>
+
+        alert("JavaScript - Superficie y volumen de una esfera");
+
+        var pi, radio, superficie, volumen;
+
+        pi = 3.14;
+        radio = prompt("Radio de la esfera: ");
+
+        superficie = 4 * pi * radio * radio;
+        volumen = superficie * radio / 3;
+
+        document.write("Radio de la esfera: " + radio + "<br>");
+        document.write("Superficie: " + superficie + "<br>Volumen: " + volumen);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Límite de la herencia de la secuencia 9</title>
+</head>
+<body>
+    <script>
+        var Vehiculo = function() {};
+
+        Vehiculo.prototype.acelerar = function()
+        {
+            document.write("acelera<br>");
+        };
+
+        var Coche = function() {};
+
+        for (clave in Vehiculo.prototype)
+        {
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        var simca1100 = new Coche();
+
+        document.write("Simca1100 tiene como constructor Coche: ");
+        document.write(simca1100 instanceof Coche);
+
+        document.write("<br>Simca1100 tiene como constructor Vehiculo: ");
+        document.write(simca1100 instanceof Vehiculo);
+    </script>
+</body>
+</html>

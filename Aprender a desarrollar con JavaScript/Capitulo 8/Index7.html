@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Sobrecarga de un método</title>
+</head>
+<body>
+    <script>
+        var Coche = function() {};
+
+        Coche.prototype.cargar = function()
+        {
+            document.write("carga<br>");
+        };
+
+        var simca1100 = new Coche();
+
+        document.write("El simca1100 ");
+        simca1100.cargar();
+
+        var renault12 = new Coche();
+
+        simca1100.cargar = function()
+        {
+            document.write("carga rápidamente <br>");
+        };
+
+        document.write("El simca1100 ");
+        simca1100.cargar();
+
+        document.write("El renault12 ");
+        renault12.cargar();
+    </script>
+</body>
+</html>

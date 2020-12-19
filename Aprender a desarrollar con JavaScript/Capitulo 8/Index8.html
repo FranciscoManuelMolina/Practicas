@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Extensión de un prototipo</title>
+</head>
+<body>
+    <script>
+        var Coche = function() {};
+
+        Coche.prototype.acelerar = function()
+        {
+            document.write("acelera<br>");
+        };
+
+        var simca1100 = new Coche();
+
+        document.write("El simca1100 ");
+        simca1100.acelerar();
+
+        Coche.prototype.frenar = function()
+        {
+            document.write("frena");
+        };
+
+        document.write("El simca1100 ");
+        simca1100.frenar();
+    </script>
+</body>
+</html>

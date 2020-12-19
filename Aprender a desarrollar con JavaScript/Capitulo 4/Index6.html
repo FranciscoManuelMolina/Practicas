@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Polinomio de segundo grado</title>
+</head>
+<body>
+    <script>
+
+        a = prompt("a:");
+        b = prompt("b:");
+        c = prompt("c:");
+
+        delta = (parseInt(b) * parseInt(b)) - (4 * parseInt(a) * parseInt(c));
+
+        document.write("a: " + a + "<br>");
+        document.write("b: " + b + "<br>");
+        document.write("c: " + c + "<br>");
+        document.write("Discriminante delta: " + delta + "<br>");
+
+        if (delta < 0)
+        {
+            document.write("Sin soluciones");
+        }
+        else
+        {
+            if (delta == 0)
+            {
+                document.write("Solución única: " + (-b / (2 * a)));
+            }
+            else{
+                document.write("Solución nº 1: " + (-b + Math.sqrt(delta)) / (2 * a) + "<br>");
+                document.write("Solución nº 2: " + (-b - Math.sqrt(delta)) / (2 * a));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Llamada de una función con argumentos</title>
+</head>
+<body>
+    <script>
+        function maxi(x, y)
+        {
+            if (x > y)
+            {
+                return x;
+            }
+            else
+            {
+                return y;
+            }
+        }
+
+        alert("Ejercicio Función");
+
+        var a, b, c, d;
+
+        a = parseInt(prompt("Argumento a: "));
+        b = parseInt(prompt("Argumento b: "));
+
+        alert("Maximo: " + maxi(a,b));
+
+        c = parseInt(prompt("Argumento c: "));
+        d = parseInt(prompt("Argumento d: "));
+
+        document.write("Maximo: " + maxi(c, d));
+    </script>
+</body>
+</html>

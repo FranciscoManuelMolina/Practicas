@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - No compartición de los métodos por las instacias de objetos</title>
+</head>
+<body>
+    <script>
+
+        var Coche = function()
+        {
+            this.tieneMotor = true;
+            this.avanzar = function()
+            {
+                document.write("avanza");
+            }
+            this.retroceder = function()
+            {
+                document.write("retrocede");
+            }
+        }
+
+        var simca1100 = new Coche();
+
+        var renault12 = new Coche();
+
+        if (simca1100.avanzar == renault12.avanzar)
+        {
+            document.write("Metodo avanzar compartido por los objetos simca1100 y renault12<br>");
+        }
+        else
+        {
+            document.write("Método avanzar no compartido por los objetos simca1100 y Renault12<br>");
+        }
+    </script>
+</body>
+</html>
