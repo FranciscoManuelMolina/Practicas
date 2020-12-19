@@ -1,0 +1,10 @@
+.degradado-blanco-negro {
+    width: 500px;
+    border: 1px solid #333;
+    padding: 5px;
+    background: radial-gradient(circle, white, black);
+}
+
+div.degradado-blanco-negro p {
+    margin: 0;
+}

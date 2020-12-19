@@ -1,0 +1,7 @@
+.sombra {
+    border: 3px solid blue;
+    box-shadow: 2px 2px 12px black;
+    -moz-box-shadow: 2px 2px 12px black;
+    -webkit-box-shadow: 2px 2px 12px black;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa', Direction=135, Strength=12);
+}

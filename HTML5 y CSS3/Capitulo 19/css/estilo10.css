@@ -1,0 +1,34 @@
+#caja {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: lightpink;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#izquierda {
+    background-color: lightblue;
+    flex: 1;
+}
+
+#centro {
+    background-color: lightgreen;
+    flex: 2;
+}
+
+#derecha {
+    background-color: lightyellow;
+    flex: 1;
+}
+
+p {
+    margin: 0;
+}

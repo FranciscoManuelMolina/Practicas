@@ -1,0 +1,14 @@
+.normal {
+    width: 180px;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.relativa {
+    position: relative;
+    top: 30px;
+    left: 60px;
+    border: 2px solid gray;
+    width: 180px;
+    text-align: center;
+}

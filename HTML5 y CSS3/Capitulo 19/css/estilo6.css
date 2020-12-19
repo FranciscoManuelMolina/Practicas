@@ -1,0 +1,6 @@
+.caja {
+    width: 280px;
+    height: 60px;
+    border: 1px solid gray;
+    overflow: auto;
+}

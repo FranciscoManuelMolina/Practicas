@@ -1,0 +1,4 @@
+.recorte {
+    position: absolute;
+    clip: rect(0px 50px 115px 0px);
+}

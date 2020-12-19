@@ -1,0 +1,8 @@
+.absoluta {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 180px;
+    border: 2px solid gray;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+nav {
+    display: block;
+    width: 380px;
+    border: 1px solid gray;
+    background-color: rgb(215, 230, 245);
+    padding-left: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+    border: 1px solid gray;
+    background-color: rgb(215,230,245);
+    text-align: center;
+    margin-right: 3px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

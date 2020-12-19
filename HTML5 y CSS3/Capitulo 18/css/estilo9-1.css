@@ -1,0 +1,6 @@
+h2 {
+    border-style: double;
+    border-width: 10px;
+    border-color: gray;
+    text-align: center;
+}

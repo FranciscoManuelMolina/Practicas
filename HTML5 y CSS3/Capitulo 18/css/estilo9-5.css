@@ -1,0 +1,9 @@
+#box {
+    width: 220px;
+    height: 80px;
+    border: silver 10px solid;
+    border-width: 20px;
+    border-image: url(../img/border.png) 50 50 round stretch;
+    padding: 10px;
+    text-align: center;
+}
