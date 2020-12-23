@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto window</title>
+</head>
+<body>
+    <script>
+        /* Mostrar el nombre del script */
+        alert("Index4-5-1.html");
+
+        /* Información de la URL de la página actual */
+
+        /* Propiedad host */
+        document.write("<br>Propiedad location.host: " + window.location.host);
+
+        /* Propiedad hostname */
+        document.write("<br>Propiedad location.hostname: " + window.location.hostname);
+
+        /* Propiedad href */
+        document.write("<br>Propiedad location.href: " + window.location.href);
+
+        /* Propiedad pathname */
+        document.write("<br>Propiedad location.pathname: " + window.location.pathname);
+
+        /* Propiedad port */
+        document.write("<br>Propiedad location.port: " + window.location.port);
+
+        /* Función volverPaginaAnterior */
+        function volverPaginaAnterior()
+        {
+            /* Volver a la página anterior */
+            window.history.back();
+        }
+    </script>
+
+    <!-- Vuelta a la página anterior -->
+    <div>
+        <input type="button" value="Volver a la página anterior" onclick="volverPaginaAnterior()">
+    </div>
+</body>
+</html>

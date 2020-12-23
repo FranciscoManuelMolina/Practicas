@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto window</title>
+</head>
+<body>
+    <!-- Formulario -->
+    <form action="">
+        Apertura de una ventana pasando la URL como argumento<br>
+        <input type="button" value="Apertura de una ventana yahoo.es (durante 10 segundos)" onclick="abrirVentana('http://www.yahoo.es')">
+    </form>
+
+    <script>
+        /* Función abrirVentana */
+        function abrirVentana(URL)
+        {
+            /* Apertura de la ventana */
+            miVentana = window.open(URL, "VENTANA", "width=400, heigth=200, location=1, titlebar=yes, resizable=yes");
+
+            /* Visualización de la ventana durante 10 segundos */
+            timeout = setTimeout("cerrarVentana()", 10000);
+        }
+
+        function cerrarVentana()
+        {
+            miVentana.close();
+        }
+    </script>
+</body>
+</html>

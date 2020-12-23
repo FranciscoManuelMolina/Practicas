@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto window</title>
+</head>
+<body>
+    <script>
+        /* Apertura de la ventana */
+        miVentana = window.open("", "VENTANA_01", "width=200, height=100, location=yes, titlebar=yes");
+
+        /* Escribir un mensaje en la ventana */
+        miVentana.document.write("Ventana creada en <b>JavaScript</b>");
+
+        /* Focus en la ventana */
+        miVentana.focus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto Date</title>
+    <script>
+        function mostrarHoraActual()
+        {
+            var miHoraReferencia = new Date();
+            var hhmmss = miHoraReferencia.toLocaleTimeString();
+            document.getElementById("horaActual").innerHTML = hhmmss;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var miHora = setInterval (
+            function()
+            {
+                mostrarHoraActual();
+            }, 1000
+        );
+    </script>
+
+    Hora actual: <span id="horaActual"></span>
+</body>
+</html>

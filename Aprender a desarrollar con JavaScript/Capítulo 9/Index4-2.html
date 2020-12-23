@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto window</title>
+</head>
+<body>
+    <form action="">
+        Apertura de una ventana pasando la URL como argumento<br>
+        <input type="button" value="Abrir una ventana yahoo.es" onclick="abrirVentana('http://www.yahoo.es')">
+        <br><br><br>
+        Cierre de la ventana<br>
+        <input type="button" value="Cierre de la ventana" onclick="cerrarVentana">
+    </form>
+
+    <script>
+        /* Función abrirVentana */
+        function abrirVentana(URL)
+        {
+            miVentana = window.open(URL, "VENTANA_02", "width=400, height=200, location=1, titlebar=yes, resizable=yes");
+        }
+
+        /* Función cerrarVentana */
+        function cerrarVentana()
+        {
+            miVentana.close();
+        }
+    </script>
+</body>
+</html>

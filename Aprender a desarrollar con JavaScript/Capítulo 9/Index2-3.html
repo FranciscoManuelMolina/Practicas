@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto Date</title>
+
+    <script>
+        function iniciarTimer()
+        {
+            valorTimer = 11;
+
+            actualizarTimer();
+        }
+
+        function actualizarTimer()
+        {
+            if (valorTimer > 0)
+            {
+                valorTimer = valorTimer - 1;
+                document.getElementById("visualizacionTimer").innerHTML = valorTimer;
+                if (valorTimer > 0)
+                {
+                    miTimer = setTimeout("actualizarTimer()", 1000);
+                }
+            }
+        }
+
+        function pararTimer()
+        {
+            clearTimeout(miTimer);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="Inicio del timer" onclick="iniciarTimer()">
+        <input type="button" value="Parada del timer" onclick="pararTimer()">
+    </div>
+
+    <br>
+    <br>
+    <div id="visualizacionTimer">Timer</div>
+</body>
+</html>
