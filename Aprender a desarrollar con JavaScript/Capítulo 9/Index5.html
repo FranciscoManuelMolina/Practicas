@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objeto navigator</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="Características del navegador" onclick="comprobarNavegador()">
+    </div>
+
+    <br><br>
+    <div id="mostrarInfosNavegador"></div>
+    <script>
+        /* Función comprobarNavegador */
+        function comprobarNavegador()
+        {
+            var caracteristicasNavegador = "";
+            caracteristicasNavegador = "Código del navegador: " + navigator.appCodeName + "<br>";
+            caracteristicasNavegador += "Nombre del nagegador: " + navigator.appName + "<br>";
+            caracteristicasNavegador += "Versión: " + navigator.appVersion + "<br>";
+            caracteristicasNavegador += "Soporte a las cookies: " + navigator.cookieEnabled + "<br>";
+            caracteristicasNavegador += "Sistema operativo: " + navigator.platform + "<br>";
+            caracteristicasNavegador += "User-agent header: " + navigator.userAgent + "<br>";
+            caracteristicasNavegador += "User-agent language: " + navigator.systemLanguage + "<br>";
+
+            /* Mostrar las características del navegador */
+            document.getElementById("mostrarInfosNavegador").innerHTML = caracteristicasNavegador;
+        }
+    </script>
+</body>
+</html>
