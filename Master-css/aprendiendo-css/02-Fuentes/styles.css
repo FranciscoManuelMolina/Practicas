@@ -1,0 +1,38 @@
+@font-face{
+    font-family: DotGothic;
+    src: url(fonts/DotGothic16/DotGothic16-Regular.ttf);
+}
+
+h1 {
+    font-family: 'Mansalva', cursiva;
+    font-style: italic;
+
+    /* Colores */
+    /* Colores del sistema */
+
+    color: mediumpurple;
+
+    /* Colores hexadecimales */
+
+    color: #ccc;
+
+    /* Colores RGB */
+
+    color: rgb(255, 100, 150);
+
+    /* Colores RGBA */
+
+    color: rgba(255, 100, 150, 0.5);
+}
+
+h3 {
+    font-family: DotGothic, "Comic Sans MS";
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
