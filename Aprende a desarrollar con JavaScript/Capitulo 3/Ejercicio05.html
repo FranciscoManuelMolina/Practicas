@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 3 Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        var apellido, nombre, inicial_apellido, inicial_nombre;
+
+        apellido = prompt("Apellido: ");
+
+        nombre = prompt("Nombre: ");
+
+        inicial_apellido = apellido.charAt(0);
+        inicial_nombre = nombre.substring(0, 1);
+
+        document.write("Las inciales de " + nombre + " " + apellido + " son " + inicial_nombre + inicial_apellido);
+    </script>
+</body>
+</html>
