@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 4 Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        let a, b, c, delta;
+
+        a = prompt("a:");
+        b = prompt("b:");
+        c = prompt("c:");
+
+        delta = (parseInt(b) * parseInt(b)) - (4 * parseInt(a) * parseInt(c));
+
+        document.write("a: " + a + "<br>");
+        document.write("b: " + b + "<br>");
+        document.write("c: " + c + "<br>");
+        document.write("Discriminante delta: " + delta + "<br>");
+
+        if (delta < 0)
+        {
+            document.write("Sin soluciones");
+        }
+        else
+        {
+            if (delta == 0)
+            {
+                document.write("Solución única: " + (-b / (2 * a)));
+            }
+            else{
+                document.write("Solución n.º1: " + (-b + Math.sqrt(delta)) / (2 * a) + "<br>");
+                document.write("Solución n.º2: " + (-b - Math.sqrt(delta)) / (2 * a));
+            }
+        }
+    </script>
+</body>
+</html>
