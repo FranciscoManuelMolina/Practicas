@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 5 Ejercicio 11</title>
+</head>
+<body>
+    <script>
+        let cnt, suma, nblu, media;
+        
+        cnt = 0;
+        suma = 0.0;
+
+        do {
+            nblu = parseFloat(prompt("Número (0 para terminar): "));
+            cnt = cnt + 1;
+            suma = suma + parseFloat(nblu);
+        }while (nblu != 0)
+
+        if (cnt == 1) 
+        {
+            document.write("No se ha introducido ningún número");
+        }
+        else
+        {
+            media = suma / (cnt - 1);
+            document.write("Media: " + media);
+        }
+    </script>
+</body>
+</html>
