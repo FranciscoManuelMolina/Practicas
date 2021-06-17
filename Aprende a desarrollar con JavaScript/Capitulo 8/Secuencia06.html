@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 Secuancia 6</title>
+</head>
+<body>
+    <script>
+        let Coche = function() {};
+
+        document.write("Prototipo del constructor: " + Coche.prototype);
+
+        Coche.prototype.zigzaguear = function()
+        {
+            document.write("zigzaguea peligrosamente<br>");
+        };
+
+        let simca1100 = new Coche();
+
+        document.write("<br>¿Qué hace el simca1100? ");
+        simca1100.zigzaguear();
+
+        var renault12 = new Coche();
+
+        if (simca1100.zigzaguear == renault12.zigzaguear)
+        {
+            document.write("Método zigzaguear compartido por los objetos simca1100 y renault12<br>");
+        }
+        else
+        {
+            document.write("Método zigzaquear no compartido por los objetos simca1100 y renaul12<br>");
+        }
+    </script>
+</body>
+</html>

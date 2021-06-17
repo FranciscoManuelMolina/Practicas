@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 Secuencia 5</title>
+</head>
+<body>
+    <script>
+        let Coche = function()
+        {
+            this.tieneMotor = true;
+            this.avanzar = function()
+            {
+                document.write("avanza");
+            }
+            this.retroceder = function()
+            {
+                document.write("retrocede");
+            }
+        }
+
+        let simca1100 = new Coche();
+
+        let renault12 = new Coche();
+
+        if (simca1100.avanzar == renault12.avanzar)
+        {
+            document.write("Método avanzar compartido por los objetos simca1100 y renault12<br>");
+        }
+        else
+        {
+            document.write("Método avanzar no compartido por los objetos simca1100 y renault12<br>");
+        }
+    </script>
+</body>
+</html>

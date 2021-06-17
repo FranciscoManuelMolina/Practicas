@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 Secuancia 7</title>
+</head>
+<body>
+    <script>
+        let Coche = function() {};
+
+        Coche.prototype.cargar = function()
+        {
+            document.write("carga<br>");
+        };
+
+        let simca1100 = new Coche();
+
+        document.write("El simca1100 ");
+        simca1100.cargar();
+
+        let renault12 = new Coche();
+
+        simca1100.cargar = function()
+        {
+            document.write("carga rápidamente <br>");
+        };
+
+        document.write("El simca1100 ");
+        simca1100.cargar();
+
+        document.write("El renault12 ");
+        renault12.cargar();
+    </script>
+</body>
+</html>
