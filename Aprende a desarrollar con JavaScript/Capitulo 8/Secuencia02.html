@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 Secuencia 2</title>
+</head>
+<body>
+    <script>
+        let Coche = function()
+        {
+            this.tieneMotor = true;
+            this.avanzar = function()
+            {
+                document.write("avanza");
+            }
+        }
+
+        let simca1100 = new Coche();
+
+        if (simca1100.tieneMotor)
+        {
+            document.write("El coche simca1100 tiene un motor<br>");
+        }
+        else
+        {
+            document.write("El coche simca1100 no tiene motor <br>");
+        }
+
+        document.write("El coche simca1100 ");
+        simca1100.avanzar();
+    </script>
+</body>
+</html>
