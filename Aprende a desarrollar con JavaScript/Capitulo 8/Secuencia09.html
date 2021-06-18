@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 8 Secuencia 9</title>
+</head>
+<body>
+    <script>
+        let Vehiculo = function() {};
+
+        Vehiculo.prototype.acelerar = function()
+        {
+            document.write("acelera<br>");
+        };
+
+        Vehiculo.prototype.frenar = function()
+        {
+            document.write("frena<br>");
+        };
+
+        let Coche = function() {};
+
+        for (clave in Vehiculo.prototype)
+        {
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        Coche.prototype.frenar = function()
+        {
+            document.write("frena");
+        };
+
+        let simca1100 = new Coche();
+
+        document.write("El simca1100 ");
+        simca1100.acelerar();
+
+        document.write("El simca1100 ");
+        simca1100.frenar();
+    </script>
+</body>
+</html>
