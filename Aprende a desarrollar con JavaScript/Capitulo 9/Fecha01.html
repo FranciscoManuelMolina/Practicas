@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 Fecha 1</title>
+</head>
+<body>
+    <script>
+        /* Método getDate -> devuelve el n.º del día del mes de la fehca de sistema */
+        let fechaDeHoy = new Date();
+        let diaMes = fechaDeHoy.getDate();
+        document.write("Número del día de la fecha de sistema: " + diaMes);
+
+        /* Método getDay -> devuelve el n.º del día en la semana (n.º de 0 a 6) de la fecha del sistema */
+        let diaSemana = fechaDeHoy.getDay();
+        document.write("<br>Número del día de la semana (número de 0 a 6) de la fecha de sistema: " + diaSemana);
+
+        /* Método getMonth -> devuelve el n.º del mes (n.º de 0 a 11) de la fecha de sistema */
+        let mes = fechaDeHoy.getMonth();
+        document.write("<br>Número del mes de la fecha de sistema: " + (mes + 1));
+
+        /* Método getFullYear -> devuelve el n.º del año (con 4 posiciones) de la fecha de sistema */
+        let año = fechaDeHoy.getFullYear();
+        document.write("<br>Número del año de la fecha de sistema: " + año);
+
+        /* Método getHours -> devuelve 1 hora (n.º de 0 a 23) de la fecha del sistema */
+        let hora = fechaDeHoy.getHours();
+        document.write("<br>Número de la hora de la fecha de sistema: " + hora);
+
+        /* Metodo getMinutes -> devuelve el n.º de minutos (n.º de 0 a 59) de la fecha de sistema */
+        let minuto = fechaDeHoy.getMinutes();
+        document.write("<br>Número del minuto de la fecha de sistema: " + minuto);
+
+        /* Método getSeconds -> devuelve el n.º del segundo (n.º de 0 a 59) */
+        let segundo = fechaDeHoy.getSeconds();
+        document.write("<br>Número del segundo de la fecha de sistema: " + segundo);
+
+        /* Método setDate -> define un n.º de día en el mes respecto a la fecha de sistema 
+        (el 15 del mes, en nuestro caso) */
+        fechaDeHoy.setDate(15);
+        document.write("<br>El 15 del mes correspondiente a la fecha del sistema: " + fechaDeHoy);
+
+        /* Método setMonth -> define la fecha un mes atrás respecto a la fecha de sistema */
+        fechaDeHoy = new Date();
+        fechaDeHoy.setMonth(fechaDeHoy.getMonth()-1);
+        document.write("<br>Un mes más respecto a la fecha de sistema: " + fechaDeHoy);
+
+        /* Método setFullYear -> define la fecha un año atrás respecto a la fecha de sistema */
+        fechaDeHoy = new Date();
+        fechaDeHoy.setFullYear(fechaDeHoy.getFullYear()-1);
+        document.write("<br>Un año más respecto a la fecha de sistema: " + fechaDeHoy);
+
+        /* Método toLocaleDateString -> convierte la fecha de sistema en una cadena fecha, en versión locale=ES */
+        fechaDeHoy = new Date();
+        let dateLocale = fechaDeHoy.toLocaleDateString();
+        document.write("<br>Fecha de sistema (version locale=ES): " + dateLocale);
+
+        /* Método toLocaleTimeString -> convierte la fecha de sistema en una cadena horas/minutos/segundos en versión locale=ES */
+        fechaDeHoy = new Date();
+        let horaLocal = fechaDeHoy.toLocaleTimeString();
+        document.write("<br>Horas/Minutos/Segundos (version locale=ES): " + horaLocal);
+    </script>
+</body>
+</html>
