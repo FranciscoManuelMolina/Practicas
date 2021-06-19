@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Capitulo 9 Ejemplo 1</title>
+</head>
+<body>
+    <script>
+        /* Apertura de la ventana */
+        /* Argumentos (en orden de aparición):
+        - URL (Opcional): Indica la dirección URL de la página que se ha de abrir.
+          Si no se especifica ninguna URL, una nueva ventana con about: blank se abre
+        - Nombre de la ventana (Opcional): Especifica el atributo destino o
+          el nombre de la ventana
+          Los siguientes valores se soportan:
+          _blank: URL se carga en una nueva ventana (valor por defecto)
+          _parent: URL se carga en el contenedor padre
+          _self: URL remplaza la página actual
+          _top: URL sustituye los juegos de contenedores que se pueden cargar
+          Nombre: El nombre de la ventana:
+        - Especificaciones detalladas de la ventana:
+          * height=pixeles: Altura de la ventana (100 píxeles mínimo)
+          * left=píxeles: Posición de la ventana respecto a la izquierda de la ventana
+          * location=yes|no|1|0: Presencia o no de una barra de dirección
+          * menubar=yes|no|1|0: Presencia o no de una barra de menús
+          * resizable=yes|no|1|0: Posibilidad o no de redimensionar la ventana
+          * scrollbars=yes|no|1|0: Presencia o no de barras de scroll
+          * estado=yes|no|1|0: Presencia o no de una barra de estado
+          * titlebar=yes|no|1|0: Presencia o no de una barra de título
+          * toolbar=yes|no|1|0: Presencia o no de una barra de herramientas
+          * width=píxeles: Longitud de la ventana en píxeles
+        */
+
+        miVentana = window.open("", "VENTANA_01", "width=200, height=100, location=yes, titlebar=yes");
+
+        miVentana.document.write("Ventana creada en <b>JavaScript</b>");
+
+        miVentana.focus();
+    </script>
+</body>
+</html>
