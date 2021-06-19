@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 Fecha 2</title>
+
+    <script>
+        function mostrarHoraActual()
+        {
+            let miHoraReferencia = new Date();
+
+            let hhmmss = miHoraReferencia.toLocaleTimeString();
+
+            document.getElementById("horaActual").innerHTML = hhmmss;
+        }
+    </script>
+</head>
+<body>
+    <script>    
+        let miHora = setInterval (
+            function()
+            {
+                mostrarHoraActual()
+            }, 1000
+        );
+    </script>
+    <p>Hora actual: <span id="horaActual"></span></p>
+</body>
+</html>
