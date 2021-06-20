@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 Ejemplo 3</title>
+
+    <script>
+        function abrirVentana(URL)
+        {
+            miVentana = window.open(URL, "VENTANA", "width=400, height=200, location=1, titlebar=yes, resizable=yes");
+            timeout = setTimeout("cerrarVentana()", 10000);
+        }
+
+        function cerrarVentana()
+        {
+            miVentana.close();
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        Apertura de una ventana pasando la URL como argumento<br>
+        <input type="button" value="Apertura de una ventana yahoo.es (durante 10 segundos)" onclick="abrirVentana('http://yahoo.es')">
+    </form>
+</body>
+</html>

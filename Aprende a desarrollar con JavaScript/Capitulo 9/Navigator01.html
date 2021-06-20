@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 Navigator 1</title>
+
+    <script>
+        function comprobarNavegador()
+        {
+            let caracteristicasNavegador = "";
+            caracteristicasNavegador = "Código del navegador: " + navigator.appCodeName + "<br>";
+            caracteristicasNavegador += "Nombre del navegador: " + navigator.appName + "<br>";
+            caracteristicasNavegador += "Versión: " + navigator.appVersion + "<br>";
+            caracteristicasNavegador += "Soporte a las cookies: " + navigator.cookieEnabled + "<br>";
+            caracteristicasNavegador += "Sistema operativo: " + navigator.platform + "<br>";
+            caracteristicasNavegador += "User-agent header: " + navigator.userAgent + "<br>";
+            caracteristicasNavegador += "User-agent language: " + navigator.systemLanguage + "<br>";
+
+            document.getElementById("mostrarInfosNavegador").innerHTML = caracteristicasNavegador;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="Características del navegador" onclick="comprobarNavegador()">
+    </div>
+
+    <br><br>
+    <div id="mostrarInfosNavegador"></div>
+</body>
+</html>

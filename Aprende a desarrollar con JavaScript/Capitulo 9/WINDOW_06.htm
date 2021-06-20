@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 WINDOW_06</title>
+
+    <script>
+        alert("WINDOW_06");
+    
+        document.write("<br>Propiedad location.host: " + window.location.host);
+    
+        document.write("<br>Propiedad location.hostname: " + window.location.hostname);
+    
+        document.write("<br>Propiedad location.href: " + window.location.href);
+    
+        document.write("<br>Propiedad location.pathname: " + window.location.pathname);
+    
+        document.write("<br>Propiedad location.port: " + window.location.port);
+
+        function volverPaginaAnterior()
+        {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="Volver a la página anterior" onclick="volverPaginaAnterior()">
+    </div>
+</body>
+</html>
+
