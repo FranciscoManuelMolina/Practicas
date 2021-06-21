@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 9 String 1</title>
+</head>
+<body>
+    <script>
+        let apellido = new String("Sanchez");
+        let nombre = "Ángel";
+        document.write("Apellido: " + apellido);
+        document.write("<br>Nombre: " + nombre);
+
+        document.write("<br>Inicial del apellido: " + apellido.charAt(0));
+
+        document.write("<br>Carácter Unicode (posición en la tabala ASCII) de la incial del nombre: " + nombre.charCodeAt(0));
+
+        let identidad = apellido.concat(" ");
+        identidad = identidad.concat(nombre);
+        document.write("<br>Apellido & nombre: " + identidad);
+
+        let posicion_primera_e = nombre.indexOf("e") + 1;
+        document.write("<br>La primera 'e' del nombre está en la posición: " + posicion_primera_e);
+
+        let posicion_ultima_e = nombre.lastIndexOf("e") + 1;
+        document.write("<br>La última 'e' del nombre está en la posición: " + posicion_ultima_e);
+
+        let origenNombre = nombre.replace("nge", "egn");
+        document.write("<br>Origen del nombre: " + origenNombre);
+
+        let apodo = nombre.slice(0, 4);
+        document.write("<br>Apodo (método slice): " + apodo);
+
+        apodo = nombre.substr(0, 4);
+        document.write("<br>Apodo (método substr): " + apodo);
+
+        apodo = nombre.substring(0, 4);
+        document.write("<br>Apodo (método substring): " + apodo);
+
+        let autor = "Ángel Sánchez es el redactor de este libro";
+        let tablaAutor = autor.split(" ");
+        document.write("<br>El nombre del autor de este libro: " + tablaAutor[1]);
+
+        document.write("<br>El apellido en mayúsculas: " + apellido.toUpperCase());
+
+        document.write("<br>El nombre en minúsculas: " + nombre.toLowerCase());
+
+        let identida = "                  Ángel Sánchez      ";
+        document.write("<br>Identidad con espacios no significativos: " + "[" + identida + "]");
+        document.write("<br>Identidad sin espacios no significativos: " + "[" + identida.trim() + "]");
+    </script>
+</body>
+</html>
