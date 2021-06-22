@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 3</title>
+</head>
+<body>
+    <h3>EcmaScript 5: Extensión de prototipo</h3>
+
+    <script>
+        /* Definición de una función constructor llamada Coche */
+        /* NOTA: El constructor está aquí vacío */
+        let Coche = function () {};
+
+        /* Se agrega un método acelerar al prototipo del constructor Coche */
+        Coche.prototype.acelerar = function()
+        {
+            document.write("acelera<br>");
+        };
+
+        /* Instaciación de un objeto simca1100 mediante el constructor Coche */
+        let simca1100 = new Coche();
+
+        /* Llamada al método acelerar del objeto simca1100 */
+        /* accesible mediante el prototipo del constructor Coche */
+        document.write("El simca1100 ");
+        simca1100.acelerar();
+
+        /* Agregar (sobrecarga) del método decelerar */
+        /* accesible mediante el prototipo del constructor Coche */
+        Coche.prototype.decelerar = function()
+        {
+            document.write("decelera");
+        };
+
+        /* Llamada al método decelerar (agregado en el prototipo */
+        /* del constructor Coche) desde el objeto simca1100 */
+        document.write("El simca1100 ");
+        simca1100.decelerar();
+    </script>
+</body>
+</html>

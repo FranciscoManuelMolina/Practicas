@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 2</title>
+</head>
+<body>
+    <h1>EcmaScript 5 & 6: Sobrecarga de un método</h1>
+
+    <script>
+        /* Definición de una función constructor llamada Coche */
+        /* NOTA: El constructor está aquí vacío */
+        let Coche = function() {};
+        
+        /* Se agrega un método frenar en seco al prototipo del constructor Coche */
+        Coche.prototype.frenarenseco = function()
+        {
+            document.write("frena en seco<br>");
+        };
+
+        /* Instanciación de un objeto simca1100 mediante el constructor Coche */
+        let simca1100 = new Coche();
+
+        /* Llamada al método frenar en seco del objeto simca1100 accesible */
+        /* mediante el prototipo del constructor Coche */
+        document.write("El simca1100 ");
+        simca1100.frenarenseco();
+
+        /* Instaciación de un objeto renault12 mediante el constructor Coche */
+        let renault12 = new Coche();
+
+        /* Modificación (sobrecarga) del método frenar en seco para el objeto simca1100 */
+        simca1100.frenarenseco = function()
+        {
+            document.write("frena en seco brucamente<br>");
+        };
+
+        /* Llamada al método frenar en seco (sobrecargado) del objeto simca1100 */
+        document.write("El simca1100 ");
+        simca1100.frenarenseco();
+
+        /* Llamada al método frenar en seco (no sobrecargado) del objeto renault12 */
+        document.write("El renault12 ");
+        renault12.frenarenseco();
+    </script>
+</body>
+</html>
