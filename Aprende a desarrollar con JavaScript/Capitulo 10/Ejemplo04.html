@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 4</title>
+</head>
+<body>
+    <h3>EcmaScript 5: Herencia</h3>
+
+    <script>
+        /* Definición de una función constructor llamada Vehiculo */
+        /* NOTA: El constructor está aquí vacío */
+        let Vehiculo = function() {};
+
+        /* Se agrega un método acelerar al prototipo del constructor Vehiculo */
+        Vehiculo.prototype.acelerar = function()
+        {
+            document.write("acelera<br>");
+        };
+
+        /* Se agrega un método decelerar al prototipo del constructor Vehiculo */
+        Vehiculo.prototype.decelerar = function()
+        {
+            document.write("decelera<br>");
+        };
+
+        /* Definición de una función constructor llamada Coche */
+        /* NOTA: El constructor está aquí vacío */
+        let Coche = function() {};
+
+        /* Copia de todos los elementos (atributos y métodos) */
+        /* del prototipo del constructor Vehiculo */
+        /* en el prototipo del constructor Coche */
+        /* NOTA: Sobre todo, no hacer Coche.prototype = Vehiculo.prototype */
+        /* pues en ese caso el prototipo se compartiría */
+        for (clave in Vehiculo.prototype)
+        {
+            Coche.prototype[clave] = Vehiculo.prototype[clave];
+        }
+
+        /* Sobrecarga del prototipo del constructor Coche */
+        /* (Se agrega un método frenar) */
+        Coche.prototype.frenar = function()
+        {
+            document.write("frena");
+        };
+
+        /* Instanciación de un objeto simca1100 mediante el consttructor Coche */
+        let simca1100 = new Coche();
+
+        /* Llamada al método acelerar del objeto simca1100 */
+        /* accesible desde la copia del prototipo del constructor Vehiculo */
+        document.write("El simca1100 ");
+        simca1100.acelerar();
+
+        /* Llamada al método frenar del objeto simca1100 */
+        /* accesible mediante el prototipo del constructor Coche */
+        document.write("El simca1100 ");
+        simca1100.frenar();
+    </script>
+</body>
+</html>
