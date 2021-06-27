@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 5</title>
+</head>
+<body>
+    <h3>EcmaScript 6: POO (declaración de clase)</h3>
+
+    <script>
+        //Definición de una clase Coche
+        class Coche {
+            //Método constructor
+            constructor(marca, modelo, pais) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.pais = pais;
+            }
+
+            //Método mostrarCoche
+            mostrarCoche() {
+                return "Marca: " + this.marca
+                + "<br>Modelo: " + this.modelo
+                + "<br>País: " + this.pais;
+            }
+        }
+
+        //Instaciación de un objeto simca1100 de la clase Coche 
+        let simca1100 = new Coche("Simca", "1100", "Francia");
+
+        //Llamada al método mostrarCoche de la clase Coche
+        document.write(simca1100.mostrarCoche());
+    </script>
+</body>
+</html>

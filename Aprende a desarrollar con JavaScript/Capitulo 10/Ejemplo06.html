@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 6</title>
+</head>
+<body>
+    <h3>EcmaScript 6: POO (herencia)</h3>
+
+    <script>
+        //Definición de una clase Coche
+        class Coche {
+            //Método constructor
+            constructor(marca, modelo, pais) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.pais = pais;
+            }
+
+            //Método mostrarCoche
+            mostrarCoche() {
+                return "Marca: " + this.marca
+                + "<br>Modelo: " + this.modelo
+                + "<br>País: " + this.pais;
+            }
+        }
+
+        //Definición de una clase CocheDeportivo (extensión
+        // de la clase Coche)
+        class CocheDeportivo extends Coche {
+            //Método constructor
+            constructor(marca, modelo, pais, velocidadmax) {
+                //Herencia de los atributos de la clase madre Coche
+                super(marca, modelo, pais);
+
+                //Atributo específico de la clase CocheDeportivo
+                this.velocidadmax = velocidadmax;
+            }
+
+            //Método mostrarCocheDeportivo
+            mostrarCocheDeportivo() {
+                return super.mostrarCoche()
+                + "<br>Velocidad máxima: " + this.velocidadmax;
+            }
+        }
+
+        //Instaciación de un objeto simca1100 de la clase Coche
+        let simca1100 = new Coche("Simca", "1100", "Francia");
+
+        //Llamada al método mostrar Coche de la clase Coche
+        document.write(simca1100.mostrarCoche());
+
+        //Instaciación de un objeto porsche911 de la clase CocheDeportivo
+        let porsche911 = new CocheDeportivo("Porsche", "911", "Francia", 290);
+
+        //Llamada al método mostrarCocheDeportivo de la clase CocheDeportivo
+        document.write("<br><br>" + porsche911.mostrarCocheDeportivo());
+    </script>
+</body>
+</html>
