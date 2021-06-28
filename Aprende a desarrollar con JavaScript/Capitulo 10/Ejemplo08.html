@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 8</title>
+</head>
+<body>
+    <h3>EcmaScript 6: Uso de la sistaxis arrow (=>)</h3>
+
+    <script>
+        //Definición de una tabla JavaScript coche deportivo
+        // (marca únicamente)
+        let tablaCochesDeportivos = ["Porsche", "Ferrari", "BMW"];
+
+        //Bucle de visualización de 3 marcas preferidas
+        //NOTA: Uso de forEach
+        document.write("<br>Bucle de visualización de 3 marcas preferidas");
+        document.write("(uso de ForEach sin notación =>):<br>");
+        tablaCochesDeportivos.forEach(function(marca) {
+            document.write("Marca: " + marca + "<br>");
+        })
+
+        //Bucle de visualización de 3 marcas preferidas
+        //NOTA: Uso de forEach con notación =>
+        document.write("<br>Bucle de visualización de 3 marcas preferidas");
+        document.write("(uso de ForEach con notación =>): <br>");
+        tablaCochesDeportivos.forEach(marca => {
+            document.write("Marca: " + marca + "<br>");
+        })
+
+        //Definición de un objeto JavaScript de coches deportivos
+        //(sin arrow function)
+        var objCochesDeportivos1 = {
+            marcas: ["Porsche", "Ferrari", "BMW"],
+            genero: "Coches deportivos",
+            mostrarCoches: function() {
+                //Self sirve para recupear el contexto padre
+                //(útil para mostrar la propiedad género)
+                //pues function(marca) crea un nuevo scope
+                //(diferente de su padre)
+                var self = this;
+                this.marcas.forEach(function(marca) {
+                    document.write("Marca: " + marca + " - ");
+                    document.write("Género: " + self.genero + "<br>")
+                })
+            }
+        };
+
+        //Visualización de las amrcas mediante el método mostrarCoches
+        document.write("<br>Bucle de visualización de 3 marcas preferidas");
+        document.write("con su género (ForEach sin notación =>):<br>");
+        objCochesDeportivos1.mostrarCoches();
+
+        //Definición de un objeto JavaScript coche deportivo
+        // (con arrow function)
+        var objCochesDeportivos2 = {
+            marcas: ["Porsche", "Ferrari", "BMW"],
+            genero: "Coches deportivos",
+            mostrarCoches: function() {
+                //Self no es necesario
+                //pues la arrow function no crea su propio scope
+                //this.genero hace referencia al this del padre
+                this.marcas.forEach((marca) => {
+                    document.write("Marca: " + marca + " - ");
+                    document.write("Género: " + this.genero + "<br>");
+                })
+            }
+        }
+
+        //Visualización de las marcas mediante el método mostrarCoches
+        document.write("<br>Bucle de visualización de 3 marcas preferidas");
+        document.write("con su género (ForEach con notación =>):<br>");
+        objCochesDeportivos2.mostrarCoches();
+    </script>
+</body>
+</html>
