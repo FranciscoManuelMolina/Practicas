@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 10 Ejemplo 7</title>
+</head>
+<body>
+    <h3>EcmaScript 6: POO (getter, setter y métodos estáticos)</h3>
+
+    <script>
+        //Definición de una clase Coche
+        class Coche {
+            //Método constructor
+            constructor (marca, modelo, pais) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.pais = pais;
+            }
+
+            //Método de tipo getter (acceso al valor del atributo marca)
+            get getMarca() {
+                //Devuelve la marca
+                return this.marca;
+            }
+
+            //Método de tipo getter (acceso al valor del atributo modelo)
+            get getModelo() {
+                //Devuelve el modelo
+                return this.modelo;
+            }
+
+            //Método de tipo getter (acceso al valor del atributo pais)
+            get getPais() {
+                //Devuelve el país
+                return this.pais;
+            }
+
+            //Método de tipo setter (modificación del atributo modelo)
+            set setModelo(value) {
+                this.modelo = value;
+            }
+
+            //Método estático que cuenta el número de objetos creados
+            // a través de esta clase
+            static getNumeroCoches() {
+                if(!this.contadorCoches && this.contadorCoches !== 0) {
+                    //Inicialización del contdor de objetos instaciados
+                    // (si no existe)
+                    this.contadorCoches = 0;
+                }
+                else {
+                    //Se incrementa el número de objetos instanciados
+                    this.contadorCoches++;
+                }
+                //Valor devuelto
+                return this.contadorCoches + 1;
+            }
+        }
+
+        //Instanciación de un objeto porsche911 de la clase Coche
+        // y visualizaicón del número de objetos instanciados
+        let porsche911 = new Coche("Porsche", "911", "Alemania");
+        document.write("Marca: " + porsche911.getMarca + "<br>");
+        document.write("Modelo: " + porsche911.getModelo + "<br>");
+        document.write("Pais: " + porsche911.getPais + "<br>");
+        document.write("Número de coches instaciados: " + Coche.getNumeroCoches() + "<br>");
+
+        //Modificación del objeto porsche911
+        porsche911.setModelo = "911 Turbo";
+        document.write("Modelo (tras la modificación): " + porsche911.getModelo + "<br><br>");
+
+        //Instaciación de un objeto testarossa de la clase Coche
+        //y visualización del número de objetos instanciados
+        let testarossa = new Coche("Ferrari", "Testarossa", "Italia");
+        document.write("Marca: " + testarossa.getMarca + "<br>");
+        document.write("Modelo: " + testarossa.getModelo + "<br>");
+        document.write("Pais: " + testarossa.getPais + "<br>");
+        document.write("Número de coches instanciados: " + Coche.getNumeroCoches() + "<br><br>");
+    </script>
+</body>
+</html>
